@@ -22,6 +22,7 @@ public class BddOperations {
 
 	TutosAndroidProvider t;
 	Activity activite;
+	//test
 	
 	
 	
