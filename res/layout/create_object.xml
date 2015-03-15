@@ -1,0 +1,165 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/editAtt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/gris"
+    tools:context="fr.upem.m2.android.andodab.CreateObjectActivity" >
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                android:text="Choisir BD"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/dbName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/valueTxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nom_btn_txt"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_weight="2" />
+
+            <EditText
+                android:id="@+id/objectNameTxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background"
+                android:ems="10"
+                android:hint="@string/hint_nom_txt" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parent"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Spinner
+                android:id="@+id/parentList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"            
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Attributs"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <Button
+                    android:id="@+id/addAtributBtn"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginBottom="26dp"
+                    android:onClick="doAddAttribut"
+                    android:background="@drawable/ajouter"
+                    android:layout_marginLeft="100dp"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/removeAttrib"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="47dp"
+                    android:background="@drawable/annuler"
+                    android:layout_height="33dp"
+                    android:onClick="removeAttrib"
+                    android:text="-" />
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/attributList"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginTop="2dp" >
+            </ListView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/cancelBtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/no"
+            android:drawableRight="@drawable/annuler"
+                android:onClick="doCancelNewObject"
+                android:layout_weight="1"
+                android:text="@string/annuler_btn_txt" />
+
+            <Button
+                android:id="@+id/validerBtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"               
+                android:layout_weight="1"
+                android:background="@color/success"
+                android:drawableRight="@drawable/modifier"
+                android:onClick="doCreateObject"
+                android:text="@string/valider_btn_txt" />
+
+        </LinearLayout>
+
+
+
+</LinearLayout>
